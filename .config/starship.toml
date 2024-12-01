@@ -1,0 +1,32 @@
+#[character]
+#success_symbol = '[](bold green)'
+#error_symbol = '[](bold red)'
+
+[username]
+style_user = 'blue bold'
+style_root = 'red bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+[hostname]
+disabled = false
+ssh_only = false
+format = 'at [$hostname:](bold green) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️  ×${count} "
+stashed = "📦 "
+modified = "📝 ×${count} "
+staged = "🗃️  ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️  ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_branch]
+format = " [$symbol$branch]($style) "
